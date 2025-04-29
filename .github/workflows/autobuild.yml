@@ -86,7 +86,7 @@ jobs:
           patch -p1 < ./ULO_Workflow.patch
 
       - name: Download ROOTFS via link
-        if: (inputs.rootfs_url != 'false')
+        if: (inputs.rootfs_url != '')
         run: |
           if [ $(echo ${{ inputs.rootfs_url }}) ]; then
             mkdir -p rootfs
