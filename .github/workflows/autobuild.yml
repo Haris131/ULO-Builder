@@ -105,7 +105,7 @@ jobs:
                 file_mega=$(sudo mega-get ${{ inputs.rootfs_url }} | awk -F: '{print $2}')
                sudo mv ${file_mega} ./rootfs
               else
-                sudo wget -q --no-check-certificate ${{ inputs.rootfs_url }} -P ./rootfs
+                sudo wget --no-check-certificate ${{ inputs.rootfs_url }} -P ./rootfs
               fi
             fi
           fi
