@@ -72,7 +72,7 @@ jobs:
           sudo -E apt-get clean
           sudo pip3 install gdown
           sudo pip3 install git+https://github.com/Juvenal-Yescas/mediafire-dl
-          megacmd_ver=$(sudo cat /etc/os_release | awk -F "DISTRIB_RELEASE=" '{print $2}')
+          megacmd_ver=$(sudo cat /etc/*ease | awk -F "DISTRIB_RELEASE=" '{print $2}')
           wget https://mega.nz/linux/repo/xUbuntu_${megacmd_ver}/amd64/megacmd-xUbuntu_${megacmd_ver}_amd64.deb && sudo apt install "$PWD/megacmd-xUbuntu_${megacmd_ver}_amd64.deb"
 
       - name: Checkout Repository
